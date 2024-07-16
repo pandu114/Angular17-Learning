@@ -1,0 +1,32 @@
+<p>structural works!</p>
+<div *ngIf="a > b">
+    a is greater than b
+</div>
+<div *ngIf="b > a">
+    b is greater than a
+</div>
+
+@if(a>b){
+    {{a}} is greater than {{b}}
+} @else {
+    {{b}} is greater than {{a}}
+}
+<div *ngFor="let item of items">{{item}}</div>
+<h1>using latest ng for</h1>
+@if(a > b){
+    @for(item of items; track item ){
+        <div>{{item}}</div>
+    }
+}
+
+@switch(userRole){
+    @case("admin"){
+        <p>user is admin</p>
+    }
+    @case("manager"){
+        <p>user is manager</p>
+    }
+    @default{
+        <p>user is default</p>
+    }
+}
